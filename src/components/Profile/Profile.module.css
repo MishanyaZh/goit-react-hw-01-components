@@ -1,15 +1,14 @@
 .description {
+  text-align: center;
   padding-top: 10px;
   margin-top: 10px;
-  text-align: center;
 }
 
 .profile {
   width: 300px;
-
-  background-color: rgb(233, 241, 237);
   margin-bottom: 10px;
 
+  background-color: rgb(233, 241, 237);
   border: 1px solid rgb(22, 22, 22);
 }
 
@@ -28,27 +27,28 @@
   color: gray;
   font-weight: 600;
 }
+
 .location {
   color: rgb(75, 70, 70);
   font-weight: 600;
 }
-.stats {
-  list-style: none;
 
+.stats {
   display: flex;
   justify-content: space-around;
 
   padding: 0px;
   margin: 0;
+  list-style: none;
 }
 
 .statsInfo {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 25px;
   background-color: rgb(91, 97, 180);
   border: 1px solid rgb(22, 22, 22);
-  padding: 25px;
 }
 
 .statsInfo:hover {

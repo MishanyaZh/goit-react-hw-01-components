@@ -1,7 +1,7 @@
 .transactionHistory {
+  width: 300px;
   border: 1px solid red;
   background-color: rgb(43, 235, 43);
-  width: 300px;
 }
 
 .th {
@@ -10,7 +10,7 @@
 }
 
 .td {
+  text-align: center;
   border: 1px solid red;
   background-color: silver;
-  text-align: center;
 }
