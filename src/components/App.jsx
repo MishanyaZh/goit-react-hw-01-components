@@ -1,17 +1,22 @@
 import { Profile } from './Profile/Profile';
-import user from './Profile/user.json';
-
 import { Statistics } from './Statistics/Statistics';
-import statisticalData from './Statistics/statistical-data.json';
-
 import { FriendList } from './FriendList/FriendList';
-import friends from './FriendList/friends.json';
-
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+
+import user from './Profile/user.json';
+import statisticalData from './Statistics/statistical-data.json';
+import friends from './FriendList/friends.json';
 import transactions from './TransactionHistory/transaction.json';
+
+import s from 'App.module.css';
+
+// const MainContainer = () => {
+//   return <div className={s.MainContainer}></div>
+// }
+
 export const App = () => {
   return (
-    <>
+    <div className={s.MainContainer}>
       <Profile
         name={user.name}
         tag={user.tag}
@@ -20,43 +25,8 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={statisticalData} />
-      <FriendList
-        friends={friends}
-        // avatar={friends.avatar}
-        // name={friends.name}
-        // isOnline={friends.isOnline}
-        // id={friends.id}
-      />
+      <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />
-    </>
+    </div>
   );
 };
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <p>
-//           hello world!!!
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

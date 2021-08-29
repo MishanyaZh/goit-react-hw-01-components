@@ -1,20 +1,39 @@
+.statistics {
+  background: khaki;
+  padding-bottom: 10px;
+}
+
 .title {
   color: blue;
   text-align: center;
+  padding-top: 20px;
+  margin-top: 0;
+  margin-bottom: 0px;
 }
 
 .statlist {
   text-align: center;
   display: flex;
-  justify-content: center;
+  margin-top: 15px;
+  padding: 0;
 }
 
 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px;
+  justify-content: center;
+  margin-right: 5px;
+  border: 1px solid black;
+  width: 60px;
+  height: 50px;
+  background: rgb(190, 231, 148);
 }
+.item:last-of-type {
+  margin-right: 0px;
+}
+
 .label {
-  /* margin-right: 20px; */
+  margin-bottom: 5px;
+  color: gray;
 }
