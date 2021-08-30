@@ -1,15 +1,19 @@
-import css from './FriendList.module.css';
+// import css from './FriendList.module.css';
+import { Item, StatusOn, StatusOf, Avatar, Name } from './FrendListItem.styled';
 
 export const FriendListItem = ({ id, isOnline, avatar, name }) => {
   return (
-    <li className={css.item} key={id}>
-      <span className={isOnline ? css.statusOn : css.statusOff}>
-        {isOnline}
-      </span>
+    // evtType={isOnline} add props for hover
+    <Item evtType={isOnline} key={id}>
+      {isOnline ? (
+        <StatusOn>{isOnline}</StatusOn>
+      ) : (
+        <StatusOf>{isOnline}</StatusOf>
+      )}
 
-      <img className={css.avatar} src={avatar} alt={name} width="48" />
+      <Avatar src={avatar} alt={name} width="48" />
 
-      <p className="name">{name}</p>
-    </li>
+      <Name>{name}</Name>
+    </Item>
   );
 };

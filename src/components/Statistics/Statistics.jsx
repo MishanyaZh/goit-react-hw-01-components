@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
+import { Item, Label } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
@@ -8,10 +9,10 @@ export const Statistics = ({ title, stats }) => {
 
       <ul className={s.statlist}>
         {stats.map(stat => (
-          <li className={s.item} key={stat.id}>
-            <span className={s.label}>{stat.label}</span>
-            <span className={s.percentage}>{stat.percentage}%</span>
-          </li>
+          <Item evtType={stat.percentage} key={stat.id}>
+            <Label>{stat.label}</Label>
+            <Label className={s.percentage}>{stat.percentage}%</Label>
+          </Item>
         ))}
       </ul>
     </section>
